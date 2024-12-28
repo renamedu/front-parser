@@ -1,0 +1,63 @@
+body {
+    background-color: #212121;
+    color: antiquewhite;
+}
+div {
+    word-break: break-all;
+}
+main {
+    margin: 10px 20px;
+}
+button {
+    width: 100%;
+    height: 100%;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.thead {
+    background-color: black;
+}
+.trow {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid grey;
+}
+.search-input {
+    width: 100%;
+}
+.tcol {
+    flex: 1;
+}
+.id-col {
+    text-align: center;
+    width: 90px;
+}
+.date-col {
+    text-align: center;
+    width: 200px;
+}
+.status-col {
+    text-align: center;
+    width: 70px;
+}
+.domain-container {
+    display: flex;
+    flex-direction: column;
+}
+/* Стиль для скрытого блока */
+.toggle-content {
+    display: none;
+}
+/* Стиль для кнопки */
+.toggle-button {
+    cursor: pointer;
+}
+.toggle-button:hover {
+    color: #00ff9f;
+    background-color: #01012b;
+}
+#table-body .trow:nth-child(even) {
+    background-color: #041118;
+}
