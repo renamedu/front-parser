@@ -22,7 +22,7 @@ button {
 .trow {
     display: flex;
     flex-direction: row;
-    border-top: 1px solid grey;
+    /* border-top: 1px solid grey; */
 }
 .search-input {
     width: 100%;
@@ -51,13 +51,20 @@ button {
     display: none;
 }
 /* Стиль для кнопки */
-.toggle-button {
-    cursor: pointer;
-}
-.toggle-button:hover {
-    color: #00ff9f;
-    background-color: #01012b;
-}
-#table-body .trow:nth-child(even) {
+.trow-container:nth-child(even) {
     background-color: #041118;
+}
+.trow-container:hover {
+    color: #aaffcc;
+    background-color: #010815;
+}
+.options {
+    padding: 8px 0px 8px 90px;
+}
+.data-with {
+    border: 1px solid transparent;
+}
+.data-with:hover {
+    border: 1px solid #aaffcc;
+    cursor: pointer;
 }

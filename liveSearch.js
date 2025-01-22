@@ -1,4 +1,6 @@
 
+
+
 function searchResultTable(searchField) {
     let query = document.getElementById(searchField).value;
     if (query.length > 2) {
@@ -16,12 +18,21 @@ function searchResultTable(searchField) {
                         </div>
                     `;
                     let results = data.map(item => `
-                        <div class="trow">
-                            <div class="id-col">${item.id}</div>
-                            <div class="tcol">${item.domain_name}</div>
-                            <div class="date-col">${item.created_at}</div>
-                            <div class="date-col">${item.updated_at}</div>
-                            <div class="status-col">${item.status}</div>
+                        <div class="trow-container">
+                            <div class="trow trow-click">
+                                <div class="id-col">${item.id}</div>
+                                <div class="tcol domain-container">
+                                    <div>
+                                        <span onclick="selectText(this)">
+                                            ${item.domain_name}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="date-col">${item.created_at}</div>
+                                <div class="date-col">${item.updated_at}</div>
+                                <div class="status-col">${item.status}</div>
+                            </div>
+                            <div class="toggle-content"></div>
                         </div>
                     `).join('');
                     document.getElementById('results').innerHTML = tableHeader + results;
@@ -34,27 +45,89 @@ function searchResultTable(searchField) {
         document.getElementById('results').innerHTML = '';
     }
 }
-function generateUrl(column, order) {
+function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+// function generateUrl(column, order, dataWith, searchQuery) {
+function generateUrl(column, order, dataWith) {
     let currentUrl = new URL(window.location.href);
 
-        currentUrl.searchParams.delete('column');
-        currentUrl.searchParams.delete('order');
+    currentUrl.searchParams.delete('column');
+    currentUrl.searchParams.delete('order');
+    currentUrl.searchParams.delete('data_with');
+    // currentUrl.searchParams.delete('search_query');
 
-        currentUrl.searchParams.append('column', encodeURIComponent(column));
-        currentUrl.searchParams.append('order', encodeURIComponent(order));
-
-        return currentUrl.toString();
+    currentUrl.searchParams.append('data_with', dataWith);  // Добавляем параметр dataWith
+    
+    currentUrl.searchParams.append('column', encodeURIComponent(column));
+    currentUrl.searchParams.append('order', encodeURIComponent(order));
+    
+    // currentUrl.searchParams.append('data_with', searchQuery);
+    return currentUrl.toString();
 }
+// function generateTable(column, button, searchQuery) {
 function generateTable(column, button) {
-    console.log(button.textContent);
+    // console.log(button.textContent);
     if (/^\s*⯅\s*$/.test(button.textContent)) {
         let order = 'DESC';
+        // window.location.href = generateUrl(column, order, searchQuery);
         window.location.href = generateUrl(column, order);
     } else if (/^\s*⯆\s*$/.test(button.textContent)) {
         let order = 'ASC';
+        // window.location.href = generateUrl(column, order, searchQuery);
         window.location.href = generateUrl(column, order);
     }
 }
+document.getElementById('search-domain').addEventListener('input', function() {
+
+    // let column = getParameterByName('column') ? getParameterByName('column') : 'created_at';
+    // let order = getParameterByName('order') ? getParameterByName('order') : 'DESC';
+    // let dataWith = getParameterByName('data_with') ? getParameterByName('data_with') : 'DESC';
+    
+    // let searchQuery = document.getElementById(searchField).value;
+    
+    // window.location.href = generateUrl(column, order, dataWith, searchQuery);
+    // window.location.href = generateUrl(column, order, dataWith);
+    
+    //Здесь надо поставить вызов с пагинацией
+    
+    
+    searchResultTable('search-domain');
+});
+document.getElementById('search-id').addEventListener('input', function() {
+    
+    //Здесь надо поставить вызов с пагинацией
+    
+    
+    
+    searchResultTable('search-id');
+});
+document.querySelector('#created-button').addEventListener('click', function() {
+    // console.log(this);
+    let dataWith = document.getElementById('data-with').checked ? 1 : 0;
+    // let searchQuery = getParameterByName('search_query') ? getParameterByName('search_query') : 0;
+    // generateTable('created_at', this, dataWith, searchQuery);
+    generateTable('created_at', this, dataWith);
+});
+document.querySelector('#updated-button').addEventListener('click', function() {
+    let dataWith = document.getElementById('data-with').checked ? 1 : 0;
+    // let searchQuery = getParameterByName('search_query') ? getParameterByName('search_query') : 0;
+    // generateTable('updated_at', this, dataWith, searchQuery);
+    generateTable('updated_at', this, dataWith);
+});
+document.getElementById('checkbox-container').addEventListener('click', function() {
+    let checkbox = document.getElementById('data-with');
+    checkbox.checked = !checkbox.checked;
+    let dataWith = checkbox.checked ? 1 : 0;
+    let column = getParameterByName('column') ? getParameterByName('column') : 'created_at';
+    let order = getParameterByName('order') ? getParameterByName('order') : 'DESC';
+    // let searchQuery = getParameterByName('search_query') ? getParameterByName('search_query') : 0;
+    
+    // window.location.href = generateUrl(column, order, dataWith, searchQuery);
+    window.location.href = generateUrl(column, order, dataWith);
+    
+});
 
 function selectText(element) {
     // Создаем диапазон и селектор для выделения текста
@@ -67,43 +140,52 @@ function selectText(element) {
     selection.addRange(range);   // Добавляем новый диапазон
 }
 
-document.getElementById('search-domain').addEventListener('input', function() {
-    searchResultTable('search-domain');
-});
-document.getElementById('search-id').addEventListener('input', function() {
-    searchResultTable('search-id');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.table').addEventListener('click', function(event) {
+        let row = event.target.closest('.trow-click');
+        let trowContainer = row.closest(".trow-container");
+        let content = trowContainer.querySelector(".toggle-content");
 
-document.querySelector('#created-button').addEventListener('click', function() {
-    generateTable('created_at', this)
-});
-document.querySelector('#updated-button').addEventListener('click', function() {
-    generateTable('updated_at', this)
-});
+        if (row && content.style.display != "block") {
+            let id = row.querySelector(".id-col").innerHTML.replace(/\s+/g, '');
 
-// document.querySelectorAll("#toggleButton").addEventListener("click", function() {
-//     var content = document.querySelectorAll("#toggleContent");
-//     // Переключение видимости блока
-//     if (content.style.display === "none" || content.style.display === "") {
-//       content.style.display = "block";  // Показываем блок
-//     } else {
-//       content.style.display = "none";   // Скрываем блок
-//     }
-//   });
-
-// Выбираем все кнопки с id "toggleButton" (если у них разные id, то можно использовать классы или другие селекторы)
-document.querySelectorAll("#toggleButton").forEach(function(button) {
-    button.addEventListener("click", function() {
-      // Находим соответствующий блок, который нужно скрыть/показать
-      var content = button.nextElementSibling; // Предполагается, что блок с контентом идет сразу после кнопки
-  
-      // Переключаем видимость блока
-      if (window.getComputedStyle(content).display === "none") {
-        content.style.display = "block";  // Показываем блок
-      } else {
-        content.style.display = "none";   // Скрываем блок
-      }
+            fetch(`/domain-data.php?id=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        let tableHeader = `
+                            <div class="thead trow">
+                                <div class="id-col">id</div>
+                                <div class="tcol">domain_id</div>
+                                <div class="tcol">key</div>
+                                <div class="tcol">value</div>
+                                <div class="date-col">created_at</div>
+                            </div>
+                        `;
+                        let results = data.map(item => `
+                            <div class="trow">
+                                <div class="id-col">${item.id}</div>
+                                <div class="tcol">${item.domain_id}</div>
+                                <div class="tcol">${item.key}</div>
+                                <div class="tcol" onclick="selectText(this)">${item.value}</div>
+                                <div class="date-col">${item.created_at}</div>
+                            </div>
+                        `).join('');
+                        content.innerHTML = tableHeader + results;
+                    } else {
+                        content.innerHTML = '<p>No results found</p>';
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+            }
+        if (content) {
+            if (window.getComputedStyle(content).display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
     });
-  });
-  
+});
+
 

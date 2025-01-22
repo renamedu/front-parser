@@ -2,8 +2,7 @@
 require_once 'pagination.php';
 $column = isset($_GET['column']) ? $_GET['column'] : 'created_at';
 $order = isset($_GET['order']) ? $_GET['order'] : 'DESC';
-$data_with = isset($_GET['data_with']) ? $_GET['data_with'] : 0;
-
+$data_with = isset($_GET['data_with']) ? $_GET['data_with'] : 'DESC';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,21 +15,8 @@ $data_with = isset($_GET['data_with']) ? $_GET['data_with'] : 0;
 </head>
 <body>
     <main>
-        <div>Домены</div>
-        <div class="options">
-            <div id="checkbox-container" class="data-with">
-                <?php
-                    if ($data_with == 1) {?>
-                        <?php echo '<input type="checkbox" id="data-with" name="data-with" checked/>' ?>
-                        <?php } else { ?>
-                            <?php echo '<input type="checkbox" id="data-with" name="data-with"/>' ?>
-                            <?php }
-                ?>
-                Только с данными
-            </div>
-            <div>
-                Всего строк: <?php echo $pagination['total_rows']; ?>
-            </div>
+        <div>
+            Домены
         </div>
         <div class="table">
             <div class="trow">

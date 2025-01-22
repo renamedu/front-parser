@@ -1,0 +1,118 @@
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+SELECT COUNT(*) FROM domains
+SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id

@@ -2,24 +2,25 @@
 require_once 'loadEnv.php';
 
 date_default_timezone_set('Europe/Moscow');
+
 $date_time = date('Y-m-d H:i:s');
 
-$host = getenv('HOST');
-$dbname = getenv('DBNAME');
-$username = getenv('DBUSER');
-$password = getenv('PASS');
+define('HOST', getenv('HOST'));
+define('DBNAME', getenv('DBNAME'));
+define('DBUSER', getenv('DBUSER'));
+define('DBPASS', getenv('PASS'));
 
-$domains_table = 'domains';
-
-$opt = array(
+define('OPT', array(
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false,
-);
+));
+const DOMAINS_TABLE = 'domains';
+const PARSED_DATA_TABLE = 'parsed_data';
 
-function dbConnect($host, $dbname, $username, $password, $opt, $date_time) {
+function dbConnect($date_time) {
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password, $opt);
+        $pdo = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, DBUSER, DBPASS, OPT);
         return $pdo;
     } catch (PDOException $e) {
         $logMessage = $date_time . ' - ' . $e->getMessage() . "\n";
@@ -27,44 +28,37 @@ function dbConnect($host, $dbname, $username, $password, $opt, $date_time) {
     }
 }
 
-function countRows($domains_table, $host, $dbname, $username, $password, $opt, $date_time) {
-    $pdo = dbConnect($host, $dbname, $username, $password, $opt, $date_time);
+function getPaginatedRows($start_index, $records_per_page, $column, $order, $date_time, $data_with) {
 
-    $sql = "SELECT COUNT(*) AS count FROM $domains_table";
+    $pdo = dbConnect($date_time);
+
+    if ($data_with == 1) {
+        $sql = "SELECT DISTINCT " . DOMAINS_TABLE . ".* FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id ORDER BY " . DOMAINS_TABLE . ".$column $order LIMIT :limit OFFSET :offset;";
+        $sql_count = "SELECT COUNT(DISTINCT " . DOMAINS_TABLE . ".id) FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id";
+    } else {
+        $sql = "SELECT * FROM " . DOMAINS_TABLE . " ORDER BY $column $order LIMIT :limit OFFSET :offset";
+        $sql_count = "SELECT COUNT(*) FROM " . DOMAINS_TABLE;
+    }
     
-    $stmt = $pdo->query($sql);
-
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    // file_put_contents('sql_requests.txt', $sql . "\n" . $sql_count . "\n", FILE_APPEND);
     
-    return $row['count'];
-}
-
-function getPaginatedRows($domains_table, $start_index, $records_per_page, $host, $dbname, $username, $password, $opt, $date_time, $column, $order) {
-
-    $pdo = dbConnect($host, $dbname, $username, $password, $opt, $date_time);
-
-    $sql = "SELECT * FROM $domains_table ORDER BY $column $order LIMIT :limit OFFSET :offset";
-
-
     $stmt = $pdo->prepare($sql);
-
     $stmt->bindParam(':limit', $records_per_page, PDO::PARAM_INT);
     $stmt->bindParam(':offset', $start_index, PDO::PARAM_INT);
-
     $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    $stmt_count = $pdo->prepare($sql_count);
+    $stmt->bindParam(':limit', $records_per_page, PDO::PARAM_INT);
+    $stmt->bindParam(':offset', $start_index, PDO::PARAM_INT);
+    $stmt_count->execute();
 
-    if ($stmt->rowCount() > 0) {
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $rows;
+    $row_count = $stmt_count->fetchColumn();
+    
+    if ($row_count > 0) {
+        $rows_data = [$rows, $row_count];
+        return $rows_data;
     } else {
         return [];
     }
 }
-
-
-
-
-
-
-
-
