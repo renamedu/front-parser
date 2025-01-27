@@ -1,118 +1,460 @@
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 10:58:19 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE ":search_query"
+2025-01-23 11:04:08 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE ":search_query"
+2025-01-23 11:04:09 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE ":search_query"
+2025-01-23 11:04:22 - SELECT * FROM domains WHERE domains.domain_name LIKE 666 ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE :search_query
+2025-01-23 11:05:05 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE "666"
+2025-01-23 11:05:06 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE "666"
+2025-01-23 11:05:06 - SELECT * FROM domains WHERE domains.domain_name LIKE "666" ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE "666"
+2025-01-23 11:06:21 - SELECT * FROM domains WHERE domains.domain_name LIKE '666' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE '666'
+2025-01-23 11:06:22 - SELECT * FROM domains WHERE domains.domain_name LIKE '666' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE '666'
+2025-01-23 11:07:57 - SELECT * FROM domains  ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:07:59 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domainsWHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:14:11 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:14:30 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:14:32 - SELECT * FROM domains WHERE domains.domain_name LIKE '%755%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%755%'
+2025-01-23 11:14:38 - SELECT * FROM domains WHERE domains.domain_name LIKE '%755%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%755%'
+2025-01-23 11:32:22 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%755%' ORDER BY domains.created_at DESC LIMIT 100 OFFSET 100;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%755%'
+2025-01-23 11:32:34 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at ASC LIMIT 100 OFFSET 100;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:32:45 - SELECT * FROM domains WHERE domains.domain_name LIKE '%3%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%3%'
+2025-01-23 11:32:56 - SELECT * FROM domains WHERE domains.domain_name LIKE '%f%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%f%'
+2025-01-23 11:32:57 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fi%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fi%'
+2025-01-23 11:32:57 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fin%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fin%'
+2025-01-23 11:32:58 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fi%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fi%'
+2025-01-23 11:32:58 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fit%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fit%'
+2025-01-23 11:32:58 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fiti%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fiti%'
+2025-01-23 11:32:59 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fitin%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fitin%'
+2025-01-23 11:32:59 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fiting%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fiting%'
+2025-01-23 11:33:00 - SELECT * FROM domains WHERE domains.domain_name LIKE '%fitingi%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%fitingi%'
+2025-01-23 11:33:05 - SELECT * FROM domains WHERE domains.domain_name LIKE '%f%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%f%'
+2025-01-23 11:33:08 - SELECT * FROM domains WHERE domains.domain_name LIKE '%f%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%f%'
+2025-01-23 11:33:11 - SELECT * FROM domains WHERE domains.domain_name LIKE '%f%' ORDER BY created_at DESC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%f%'
+2025-01-23 11:48:57 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 100
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:49:04 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:49:14 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:49:16 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:49:17 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:49:20 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:54:38 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:56:29 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:56:31 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-23 11:56:33 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:56:36 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:56:39 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%666%' ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:56:41 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 11:56:44 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:57:43 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:57:45 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:57:50 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:58:01 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:58:04 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:58:04 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:58:06 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:58:07 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:16 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 11:59:20 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:21 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:22 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:22 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:23 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:25 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:27 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:28 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:29 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 11:59:30 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:07:38 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:07:39 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%' ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:07:43 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:07:46 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:08:09 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:08:27 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:08:29 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:08:51 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:08:56 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:10:19 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:10:42 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:22:51 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:22:56 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:22:57 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:25:13 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:25:15 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:25:30 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:25:31 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:27:56 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:28:03 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:28:32 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:29:17 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:35:25 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:35:54 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:37:27 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:37:28 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:38:36 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:38:46 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:40:52 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:40:55 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:40:57 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:41:01 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:41:02 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:41:04 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:41:33 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:41:42 - SELECT * FROM domains WHERE domains.domain_name LIKE '%undefined%' ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%undefined%'
+2025-01-23 12:43:04 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:43:18 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:43:23 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:43:25 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:47:10 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
-SELECT * FROM domains ORDER BY created_at DESC LIMIT :limit OFFSET :offset
+2025-01-23 12:47:26 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
 SELECT COUNT(*) FROM domains
-SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id ORDER BY domains.created_at DESC LIMIT :limit OFFSET :offset;
-SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id
+2025-01-23 12:47:33 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 12:49:29 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 12:49:31 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 12:49:32 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 12:49:33 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:14:07 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:14:24 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:15:12 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:15:25 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:18:15 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:18:31 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:20:35 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:20:39 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:24:37 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:24:40 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:24:53 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:25:28 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:25:30 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:26:00 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:26:01 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:26:51 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:26:53 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:47 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:52 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:53 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-23 13:29:54 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:56 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:58 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:59 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:29:59 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:03 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:04 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:06 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:06 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:07 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:08 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:09 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:15 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:18 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:30:27 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:31:23 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:32:28 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:32:30 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:32:32 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:32:33 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 13:32:35 - SELECT * FROM domains WHERE domains.domain_name LIKE '%gggg%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%gggg%'
+2025-01-23 13:32:40 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 13:32:45 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 13:36:04 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 13:36:07 - SELECT * FROM domains WHERE domains.domain_name LIKE '%6667%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%6667%'
+2025-01-23 13:36:11 - SELECT * FROM domains WHERE domains.domain_name LIKE '%4%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%4%'
+2025-01-23 13:36:15 - SELECT * FROM domains WHERE domains.domain_name LIKE '%42%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%42%'
+2025-01-23 13:36:19 - SELECT * FROM domains WHERE domains.domain_name LIKE '%424%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%424%'
+2025-01-23 13:36:23 - SELECT * FROM domains WHERE domains.domain_name LIKE '%4246%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%4246%'
+2025-01-23 13:36:37 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains
+2025-01-23 13:36:41 - SELECT * FROM domains WHERE domains.domain_name LIKE '%g%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%g%'
+2025-01-23 13:36:41 - SELECT * FROM domains WHERE domains.domain_name LIKE '%go%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%go%'
+2025-01-23 13:36:41 - SELECT * FROM domains WHERE domains.domain_name LIKE '%gog%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%gog%'
+2025-01-23 13:39:29 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains
+2025-01-23 13:56:51 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.created_at DESC LIMIT 100 OFFSET 400;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-23 13:56:52 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains
+2025-01-23 14:02:11 - SELECT * FROM domains WHERE domains.domain_name LIKE '%2%' ORDER BY created_at DESC LIMIT 100 OFFSET 400
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%2%'
+2025-01-23 14:02:18 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 14:02:20 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 14:02:38 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.created_at DESC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-23 14:02:41 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-23 14:02:45 - SELECT * FROM domains WHERE domains.domain_name LIKE '%235%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%235%'
+2025-01-23 14:02:55 - SELECT * FROM domains WHERE domains.domain_name LIKE '%2357%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%2357%'
+2025-01-23 14:03:03 - SELECT * FROM domains WHERE domains.domain_name LIKE '%666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%666%'
+2025-01-23 14:03:06 - SELECT * FROM domains WHERE domains.domain_name LIKE '%6666%' ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%6666%'
+2025-01-27 12:11:06 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:13 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:15 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:16 - SELECT * FROM domains ORDER BY created_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:17 - SELECT * FROM domains ORDER BY created_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:17 - SELECT * FROM domains ORDER BY updated_at DESC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:18 - SELECT * FROM domains ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:11:20 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:11:23 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%755%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%755%'
+2025-01-27 12:11:27 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%ппп%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%ппп%'
+2025-01-27 12:11:31 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%hhh%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%hhh%'
+2025-01-27 12:11:35 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%222%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%222%'
+2025-01-27 12:11:38 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%222%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%222%'
+2025-01-27 12:11:47 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:00 - SELECT * FROM domains WHERE domains.domain_name LIKE '%www%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:01 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:01 - SELECT * FROM domains WHERE domains.domain_name LIKE '%www%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:02 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:02 - SELECT * FROM domains WHERE domains.domain_name LIKE '%www%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:03 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:05 - SELECT * FROM domains WHERE domains.domain_name LIKE '%www%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:12:06 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:15:07 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%www%'
+2025-01-27 12:15:47 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%ццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%ццц%'
+2025-01-27 12:15:48 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wццц%'
+2025-01-27 12:15:48 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwццц%'
+2025-01-27 12:15:49 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwццц%'
+2025-01-27 12:15:51 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwццц%'
+2025-01-27 12:15:52 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwццц%'
+2025-01-27 12:15:52 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwццц%'
+2025-01-27 12:18:33 - SELECT * FROM domains WHERE domains.domain_name LIKE '%wwwwwwццц%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%wwwwwwццц%'
+2025-01-27 12:18:35 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwццц%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwццц%'
+2025-01-27 12:18:37 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццd%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццd%'
+2025-01-27 12:18:38 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццds%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццds%'
+2025-01-27 12:20:40 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццds%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%wwwwwwцццds%'
+2025-01-27 12:20:43 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:20:47 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:20:53 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:20:56 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%'
+2025-01-27 12:21:01 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:21:05 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.co%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.co%'
+2025-01-27 12:21:05 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.com%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.com%'
+2025-01-27 12:21:09 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.co%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.co%'
+2025-01-27 12:21:10 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:21:12 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%kek%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%kek%'
+2025-01-27 12:21:14 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:21:18 - SELECT * FROM domains ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains
+2025-01-27 12:21:19 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:21:21 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%com%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%com%'
+2025-01-27 12:21:24 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id 
+2025-01-27 12:21:26 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%'
+2025-01-27 12:21:29 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 100;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%'
+2025-01-27 12:21:41 - SELECT DISTINCT domains.* FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%' ORDER BY domains.updated_at ASC LIMIT 100 OFFSET 0;
+SELECT COUNT(DISTINCT domains.id) FROM domains JOIN parsed_data ON domains.id = parsed_data.domain_id  WHERE domains.domain_name LIKE '%.ru%'
+2025-01-27 12:21:49 - SELECT * FROM domains WHERE domains.domain_name LIKE '%.ru%' ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains WHERE domains.domain_name LIKE '%.ru%'
+2025-01-27 12:21:56 - SELECT * FROM domains ORDER BY updated_at ASC LIMIT 100 OFFSET 0
+SELECT COUNT(*) FROM domains

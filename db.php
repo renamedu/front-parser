@@ -28,37 +28,59 @@ function dbConnect($date_time) {
     }
 }
 
-function getPaginatedRows($start_index, $records_per_page, $column, $order, $date_time, $data_with) {
+function getPaginatedRows($start_index, $records_per_page, $column, $order, $date_time, $data_with, $search_query) {
 
     $pdo = dbConnect($date_time);
 
-    if ($data_with == 1) {
-        $sql = "SELECT DISTINCT " . DOMAINS_TABLE . ".* FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id ORDER BY " . DOMAINS_TABLE . ".$column $order LIMIT :limit OFFSET :offset;";
-        $sql_count = "SELECT COUNT(DISTINCT " . DOMAINS_TABLE . ".id) FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id";
+    if ($search_query != '') {
+        $like_term = " WHERE " . DOMAINS_TABLE . ".domain_name LIKE '%$search_query%'";
     } else {
-        $sql = "SELECT * FROM " . DOMAINS_TABLE . " ORDER BY $column $order LIMIT :limit OFFSET :offset";
-        $sql_count = "SELECT COUNT(*) FROM " . DOMAINS_TABLE;
+        $like_term = '';
     }
+
+
+    if ($data_with == 1) {
+        $sql = "SELECT DISTINCT " . DOMAINS_TABLE . ".* FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id $like_term ORDER BY " . DOMAINS_TABLE . ".$column $order LIMIT :limit OFFSET :offset;";
+        $sql_count = "SELECT COUNT(DISTINCT " . DOMAINS_TABLE . ".id) FROM " . DOMAINS_TABLE . " JOIN " . PARSED_DATA_TABLE . " ON " . DOMAINS_TABLE . ".id = " . PARSED_DATA_TABLE . ".domain_id $like_term";
+    } else {
+        $sql = "SELECT * FROM " . DOMAINS_TABLE . "$like_term ORDER BY $column $order LIMIT :limit OFFSET :offset";
+        $sql_count = "SELECT COUNT(*) FROM " . DOMAINS_TABLE . $like_term;
+    }
+
     
-    // file_put_contents('sql_requests.txt', $sql . "\n" . $sql_count . "\n", FILE_APPEND);
+    $sqlWithValues = str_replace(
+        [':limit', ':offset', ':search_query'],
+        [$records_per_page, $start_index, $search_query],
+        $sql
+    );
+    file_put_contents('sql_requests.txt', $date_time . ' - ' .$sqlWithValues . "\n" . $sql_count . "\n", FILE_APPEND);
+    
     
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':limit', $records_per_page, PDO::PARAM_INT);
     $stmt->bindParam(':offset', $start_index, PDO::PARAM_INT);
+
+    // if ($like_term != '') {
+    //     $stmt->bindParam(':search_query', $search_query, PDO::PARAM_INT);
+    // }
+
+    // $like_term != '' && $stmt->bindParam(':search_query', $search_query, PDO::PARAM_INT);
+    
+
+
+
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     $stmt_count = $pdo->prepare($sql_count);
-    $stmt->bindParam(':limit', $records_per_page, PDO::PARAM_INT);
-    $stmt->bindParam(':offset', $start_index, PDO::PARAM_INT);
+    // $like_term != '' && $stmt_count->bindParam(':search_query', $search_query, PDO::PARAM_INT);
     $stmt_count->execute();
-
     $row_count = $stmt_count->fetchColumn();
     
     if ($row_count > 0) {
         $rows_data = [$rows, $row_count];
         return $rows_data;
     } else {
-        return [];
+        return [[], 0];
     }
 }

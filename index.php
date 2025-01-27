@@ -3,6 +3,7 @@ require_once 'pagination.php';
 $column = isset($_GET['column']) ? $_GET['column'] : 'created_at';
 $order = isset($_GET['order']) ? $_GET['order'] : 'DESC';
 $data_with = isset($_GET['data_with']) ? $_GET['data_with'] : 0;
+$searchQuery = isset($_GET['search_query']) ? $_GET['search_query'] : '';
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ $data_with = isset($_GET['data_with']) ? $_GET['data_with'] : 0;
                     <input type="text" id="search-id" class="search-input" placeholder="ID">
                 </div>
                 <div class="tcol">
-                    <input type="text" id="search-domain" class="search-input" placeholder="Search domain name">
+                    <input type="text" id="search-domain" class="search-input" placeholder="Search domain name" value="<?php echo htmlspecialchars($searchQuery); ?>">
                 </div>
                 <div class="date-col">
                     <button id="created-button">
